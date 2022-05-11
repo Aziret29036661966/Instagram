@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/mainFragment"
+    android:id="@+id/main_navigation">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.instagram.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main"/>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.instagram.SerchFragmnent"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_serch_fragmnent"/>
+    <fragment
+        android:id="@+id/storyAfterFragment"
+        android:name="com.example.instagram.StoryAfterFragment"
+        android:label="fragment_story_after"
+        tools:layout="@layout/fragment_story_after" />
+    <fragment
+        android:id="@+id/commentFragment"
+        android:name="com.example.instagram.CommentFragment"
+        android:label="fragment_comment"
+        tools:layout="@layout/fragment_comment" />
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.example.instagram.CameraFragment"
+        android:label="CameraFragment" />
+
+</navigation>

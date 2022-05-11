@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CommentFragment">
+
+    <LinearLayout
+        android:id="@+id/ln_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_add_get"
+        android:layout_width="28dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/ic_go"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="16dp"/>
+    <View
+        android:id="@+id/v_view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="32dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintTop_toBottomOf="@id/v_view"
+        android:layout_marginTop="28dp"
+        android:id="@+id/RecyclerViewFirst"
+        tools:listitem="@layout/item_comment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <EditText
+        android:id="@+id/edt_comment"
+        android:layout_width="250dp"
+        android:layout_height="66dp"
+        android:background="#222"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="  введите свой коментарий"
+        android:textColorHint="@color/white"/>
+    <ImageView
+        android:id="@+id/cool_man_on_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cool"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="4dp"/>
+    <TextView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/txt_title"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+    <View
+        android:layout_marginVertical="8dp"
+        android:layout_below="@id/txt_title"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        tools:ignore="MissingConstraints" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_get"
+        android:layout_width="66dp"
+        android:layout_height="52dp"
+        android:text="add"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
